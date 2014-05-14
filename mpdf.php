@@ -7100,7 +7100,6 @@ function Output($name='',$dest='')
 			header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
 			header('Content-Type: application/force-download');
 			header('Content-Type: application/octet-stream', false);
-			header('Content-Type: application/x-download', false);
 			header('Content-Type: application/download', false);
 			header('Content-Type: application/pdf', false);
 			if (!isset($_SERVER['HTTP_ACCEPT_ENCODING']) OR empty($_SERVER['HTTP_ACCEPT_ENCODING'])) {
@@ -7140,7 +7139,8 @@ function Output($name='',$dest='')
 		}
 	//==============================================================================================================
 
-        return '';
+        exit;
+//        return '';
 }
 
 
